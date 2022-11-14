@@ -41,7 +41,7 @@ def setNextTimer():
     else:
         torrow = time.time() + 14400#4 hours
         tt = time.localtime(torrow)
-        nTime(tt[0],tt[1],tt[2],8,0,0,0,0)
+        nTime = (tt[0],tt[1],tt[2],8,0,0,0,0)
 
     nextTime = time.mktime(nTime) - time.time()
     tim1.init(period=nextTime*1000, mode=Timer.ONE_SHOT, callback=switchLogic)
