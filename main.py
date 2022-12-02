@@ -23,6 +23,9 @@ def switchLogic(t):
         setNightTemp()
     
     # nexTime = time.time()+43200#12 hours
+    while not syncTime(0):
+        print('60 seconds to retry')
+        time.sleep(60)
     setNextTimer()
     
 def setNextTimer():
